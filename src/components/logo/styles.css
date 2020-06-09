@@ -1,0 +1,12 @@
+.logo a{
+    font-family: 'Indie Flower', cursive;
+    text-decoration: none;
+    color: yellowgreen;
+    cursor: default;
+    background-color: black;
+    padding: 2px 5px;
+    border-radius: 8px;
+    margin: 0 5px;
+
+}
+

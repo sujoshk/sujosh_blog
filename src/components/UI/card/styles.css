@@ -1,0 +1,13 @@
+.card {
+    width: 98%;
+    
+    color: purple;
+    background-color: rgb(233, 210, 210);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 5px auto;
+    padding: 0;
+    
+}
