@@ -4,6 +4,7 @@
     text-align: center;
     background: rgb(45, 0, 29);
     padding: 0;
+    border-radius: 15px;
 }
 
 .card-header{
@@ -18,7 +19,51 @@
     font-weight: 800;
 }
 
-.profile-pic img{
-    max-width: 100% ;
+
+
+.profile-image-container {
+    width: 100%;
+    box-sizing: border-box;
     
+
+}
+
+
+.profile-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 20px 0;
+}
+
+.personal-bio {
+    font-size: 13px;
+    font-weight: 800;
+    color: rgb(48, 13, 48);
+}
+
+
+.recent-post {
+    border-bottom: 1px solid green;
+    padding: 20px 0;
+    
+   
+}
+
+
+.recent-post h3 {
+    
+    letter-spacing: 1px;
+}
+
+.recent-post span {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.recent-post p {
+    font-weight: 300;
+    color: black;
+    letter-spacing: 1px;
+    margin: 5px;
+
 }
