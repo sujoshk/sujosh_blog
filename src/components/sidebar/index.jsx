@@ -1,9 +1,27 @@
-import React from 'react';
+import React , {useState, useEffect} from 'react';
 import './styles.css';
 import Card from '../../components/UI/card';
+import blogPost from '../../data/blogs.json';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = (props) => {
+
+
+const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const posts = blogPost.data;
+    setPosts(posts)
+  },posts);
+
+
+
+
   return(
+
+    
+
+
     <div className="sidebar-container">
         
         
@@ -36,27 +54,24 @@ const Sidebar = (props) => {
             </div>
 
             <div className="recent-posts">
-                
-               {/* Recent post 1 */}
-                <div className="recent-post">
-                    <h3>How to not be</h3>
-                    <span>June 29, 2018</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, minima...</p>
-                </div>
 
-                {/* Recent post 2 */}
-                <div className="recent-post">
-                    <h3>How not to do</h3>
-                    <span>June 29, 2018</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, minima...</p>
-                </div>
+                {
+                    posts.map(post => {
+                        return(
+                            <NavLink to={`/post/${post.id}`}>
+                            <div className="recent-post">
+                                <h3>{post.blogTitle}</h3>
+                                <span>{post.postedOn}</span>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, minima...</p>
+                            </div>
+                            </NavLink>
+                            
+                        )                        
+                    })
+                }
 
-                {/* Recent post 3 */}
-                <div className="recent-post">
-                    <h3>How not to not</h3>
-                    <span>June 29, 2018</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, minima...</p>
-                </div>
+
+             
 
             </div>
 
